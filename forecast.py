@@ -28,7 +28,7 @@ def setup_forecast_db(db_path="forecast.db"):
         """)
     print(f"Forecast database '{db_path}' is ready.")
 
-def forecast_next_bus(analysis_db="analysis_results.db", source_db="muni_detections_v2.db", forecast_db="forecast.db"):
+def forecast_next_bus(analysis_db="analysis_results.db", source_db="muni_detections.db", forecast_db="forecast.db"):
     """
     Forecasts the next bus arrival time based on historical analysis
     and saves the forecast to a database.

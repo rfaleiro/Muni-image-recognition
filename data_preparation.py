@@ -34,7 +34,7 @@ def get_daypart(hour):
     else:
         return "Night"
 
-def analyze_and_store_intervals(source_db="muni_detections_v2.db", analysis_db="analysis_results.db"):
+def analyze_and_store_intervals(source_db="muni_detections.db", analysis_db="analysis_results.db"):
     """
     Analyzes bus detection intervals from a source database and stores
     aggregated results (by day, daypart, day of week) in an analysis database.
