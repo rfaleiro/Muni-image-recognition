@@ -126,8 +126,12 @@ def index():
 def data():
     return render_template("data.html")
 
+@app.route("/libraries")
+def libraries():
+    return render_template("libraries.html")
+
 # --- Run the App ---
 if __name__ == '__main__':
     # 'debug=True' makes the server reload automatically when you save the file
-    app.run(port=5003, debug=True)
+    app.run(port=5000, debug=True)
 

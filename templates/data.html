@@ -1,77 +1,14 @@
-<!-- Read Me / Context
+{% extends "layout.html" %}
 
-The goal of this website is to host my final project for CS50.
-The idea is to use image recongnition to track a local San Francisco bus route and infer with forecasting algothings when the next bus will arrive.
-Project requiriments:
-- Install webcab at my appartment window
-- Use OpenCV and YOLO libraries to identify when a bus pass by
-- Store this data in a data base
-- Use statics modeling to forecast when the new bus will arive based on historical data.
-- Provide commom stats such as last bus, average interval and etc..
-- Publish using HTML
--->
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-
-    <head>
-        <title>Muni 48 and Noe Stats</title>
-
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-        <link href="styles.css" rel="stylesheet">
-
-    </head>
-
-
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top border-bottom">
-                <div class="container">
-                    <a class="navbar-brand fw-bold fs-4" href="#">Muni <span class="gradient-text">48 & Noe</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link" href="/">Live Stats</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/data">Historical Data</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/libraries">Libraries Used</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/code">Code</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/about">Who Am I</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-    <main class="container py-5">
+        {% block main %}
         <section>
+            <p>Embed Locker studio here</p>
+        
             <div class="text-center py-4">
                 <h1 class="display-5 fw-bold text-dark mb-3">The Data Pipeline</h1>
                 <p class="lead text-muted">An automated workflow from image recongnition to data insghts.</p>
             </div>
-            <div class="row g-4 text-center">
-                <div class="col-md-3"><div class="card h-100 p-3 shadow-sm"><div class="card-body"><strong>1. Video input</strong><p class="small text-muted">Video is captured by local webcam.</p></div></div></div>
-                <div class="col-md-3"><div class="card h-100 p-3 shadow-sm"><div class="card-body"><strong>2. Process</strong><p class="small text-muted">Image recognition model captures when a new Muni arrived at local stop.</p></div></div></div>
-                <div class="col-md-3"><div class="card h-100 p-3 shadow-sm"><div class="card-body"><strong>3. Store</strong><p class="small text-muted">Results are parsed and streamed into a SQLite database.</p></div></div></div>
-                 <div class="col-md-3"><div class="card h-100 p-3 shadow-sm"><div class="card-body"><strong>4. Data processing / Predications</strong><p class="small text-muted">Forcast is provided based trained data.</p></div></div></div>
-                <div class="col-md-3"><div class="card h-100 p-3 shadow-sm"><div class="card-body"><strong>5. Visualize</strong><p class="small text-muted">Data is made available only through Flask / HTML.</p></div></div></div>
-            </div>
+            
         </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white mt-5">
-        <div class="container py-4 text-center">
-            <p class="mb-1">&copy; 2025 Computer Vision on GCP. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
+        {% endblock %}
+   
