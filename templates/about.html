@@ -2,11 +2,32 @@
 
         {% block main %}
         <section>
-                 
-            <div class="text-center py-4">
-                <h1 class="display-5 fw-bold text-dark mb-3">The Data Pipeline</h1>
-                <p class="lead text-muted">An automated workflow from image recongnition to data insghts.</p>
+            <div class="text-center">
+                <div class="card h-100 p-3 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="text-dark mb-3">Who am I?</h4>
+                        <img src="{{ url_for('static', filename='rogerio_cover.jpg') }}" alt="Rogerio Faleiro" width="250" height="300" style="object-fit: cover; object-position: right;">
+                        <div class="mb-4"></div>
+                        <h1 class="fw-bold text-dark mb-3">Rogerio Faleiro</h1>
+                        <div class="mb-4"></div>
+                        <p class="lead">Data-Driven Advertising & Product Strategist</p>
+                        <p class="lead"></p>San Francisco, CA • +1 650 284-9854 • rogerbsc1@gmail.com • LinkedIn</p>
+                        <div class="mb-4"></div>
+                                                    
+                        <p>A data-driven advertising strategist with over 16 years of experience transforming complex
+                                datasets into actionable insights and revenue growth for global technology leaders. Expert in
+                                leveraging data science, machine learning (Python, R, SQL) , and full-funnel advertising
+                                strategies to drive client success on major digital platforms.
+                                Proven ability to lead high-impact, cross-functional projects, from developing innovative data
+                                models to securing multi-million dollar client deals and enhancing product feautures.</p>
+                        
+                    </div>
+                </div>
             </div>
+            
+        
+
+
             
         </section>
         {% endblock %}

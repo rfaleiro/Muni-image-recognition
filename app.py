@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from datetime import datetime
 import sqlite3
 import math
+import subprocess
 
 app = Flask(__name__)
 
@@ -43,6 +44,24 @@ def parse_flexible_timestamp(timestamp_str):
 def index():
     """This function runs when someone visits the main page."""
     
+    # --- Run data preparation and forecast scripts ---
+    # if app.debug:
+    try:
+        print("Running data_preparation.py...")
+        subprocess.run(["python", "data_preparation.py"], check=True)
+        print("data_preparation.py finished.")
+        
+        print("Running forecast.py...")
+        subprocess.run(["python", "forecast.py"], check=True)
+        print("forecast.py finished.")
+        
+    except subprocess.CalledProcessError as e:
+        print(f"Error running script: {e}")
+        # Handle error appropriately, maybe return an error page
+    except FileNotFoundError as e:
+        print(f"Error: {e}. Make sure the script exists and python is in your PATH.")
+        # Handle error appropriately
+
     # --- Database Connections ---
     conn_muni = get_db('muni_detections.db')
     conn_forecast = get_db('forecast.db')
@@ -96,9 +115,9 @@ def index():
                            muni_count=muni_count,
                            predicted_arrival_at=forecasted_arrival_formatted)
 
-@app.route("/data")
-def data():
-    return render_template("data.html")
+# @app.route("/data")
+# def data():
+#     return render_template("data.html")
 
 @app.route("/libraries")
 def libraries():
