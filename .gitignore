@@ -1,0 +1,8 @@
+.__pycache__
+.bus_captures
+.data_bases
+.yolov8m.pt
+.test.py
+.muni_detections.db
+.analysis_results.db
+.forecast.db

@@ -1,0 +1,6 @@
+flask
+ultralytics
+opencv-python
+pandas
+psycopg2-binary
+google-cloud-sql-python-connector[pg8000]
