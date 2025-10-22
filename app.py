@@ -98,7 +98,7 @@ def index():
         avg_interval_minutes = int(math.ceil(avg_seconds / 60))
 
     # --- FORECAST CALCULATION ---
-    forecast_query = conn_forecast.execute('SELECT predicted_arrival_at FROM arrival_forecasts ORDER BY predicted_arrival_at DESC LIMIT 1').fetchone()
+    forecast_query = conn_forecast.execute('SELECT predicted_arrival_at FROM arrival_forecasts ORDER BY forecast_generated_a DESC LIMIT 1').fetchone()
     
     forecasted_arrival_formatted = "N/A"
     if forecast_query and forecast_query['predicted_arrival_at']:
@@ -130,5 +130,5 @@ def about():
 # --- Run the App ---
 if __name__ == '__main__':
     # 'debug=True' makes the server reload automatically when you save the file
-    app.run(port=5002, debug=True)
+    app.run(port=5000, debug=True)
 
