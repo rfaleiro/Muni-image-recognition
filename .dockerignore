@@ -1,0 +1,13 @@
+.git
+.gitignore
+__pycache__
+*.pyc
+*.db
+*.db-journal
+bus_captures/
+*.ipynb
+Dockerfile
+.dockerignore
+README.md
+LICENSE
+.migrate.sh

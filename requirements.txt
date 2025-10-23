@@ -3,4 +3,6 @@ ultralytics
 opencv-python
 pandas
 psycopg2-binary
-google-cloud-sql-python-connector[pg8000]
+cloud-sql-python-connector
+pg8000
+gunicorn
