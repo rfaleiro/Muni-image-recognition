@@ -1,8 +1,24 @@
-.__pycache__
-.bus_captures
-.data_bases
-.yolov8m.pt
-.test.py
-.muni_detections.db
-.analysis_results.db
-.forecast.db
+# Python cache
+__pycache__/
+*.pyc
+
+# Databases
+*.db
+*.db-journal
+
+# Local data and models
+bus_captures/
+data_bases/
+*.pt
+
+# Credentials and local scripts
+*.json
+*.sh
+
+# Test files
+test.py
+
+# IDE and OS files
+.DS_Store
+.vscode/
+.idea/
