@@ -7,30 +7,35 @@
                 <div class="text-center py-4">
                 <h1 class="display-5 fw-bold text-dark mb-3">Next Muni forecast: {{ predicted_arrival_at }}</h1>
 
-                    <div class="d-flex justify-content-center gap-5 p-2">
+                    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
 
-
-                        <div class="card text-center" style="width: 18rem;">
-                            <div class="card-body">
-                                <i class="bi bi-tag-fill fs-1 text-secondary"></i>
-                                <p class="card-text fs-5 text-muted">Last Muni</p>
-                                <p class="fs-4 fw-bold text-primary my-1">{{ last_muni }}</p>
+                        <div class="col">
+                            <div class="card h-100 text-center">
+                                <div class="card-body">
+                                    <i class="bi bi-tag-fill fs-1 text-secondary"></i>
+                                    <p class="card-text fs-5 text-muted">Last Muni</p>
+                                    <p class="fs-4 fw-bold text-primary my-1">{{ last_muni }}</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="card text-center" style="width: 18rem;">
-                            <div class="card-body">
-                                <i class="bi bi-tag-fill fs-1 text-secondary"></i>
-                                <p class="card-text fs-5 text-muted">Average Muni Interval</p>
-                                <p class="fs-4 fw-bold text-primary my-1">{{ muni_interval }} min</p>
+                        <div class="col">
+                            <div class="card h-100 text-center">
+                                <div class="card-body">
+                                    <i class="bi bi-tag-fill fs-1 text-secondary"></i>
+                                    <p class="card-text fs-5 text-muted">Average Muni Interval</p>
+                                    <p class="fs-4 fw-bold text-primary my-1">{{ muni_interval }} min</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="card text-center" style="width: 18rem;">
-                            <div class="card-body">
-                                <i class="bi bi-tag-fill fs-1 text-secondary"></i>
-                                <p class="card-text fs-5 text-muted">Munis today</p>
-                                <p class="fs-4 fw-bold text-primary my-1">{{ muni_count }}</p>
+                        <div class="col">
+                            <div class="card h-100 text-center">
+                                <div class="card-body">
+                                    <i class="bi bi-tag-fill fs-1 text-secondary"></i>
+                                    <p class="card-text fs-5 text-muted">Munis today</p>
+                                    <p class="fs-4 fw-bold text-primary my-1">{{ muni_count }}</p>
+                                </div>
                             </div>
                         </div>
 
@@ -40,7 +45,8 @@
                             <!-- <h1 class="display-8 fw-bold text-white">Almost Live webcam</h1> -->
                                 
                                 <div class="ratio ratio-16x9 mt-3">
-                                    <iframe src="https://www.youtube.com/embed/ey7hUon-HQ8?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe src="https://www.youtube.com/embed/vnGPIWK4mDQ?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
                                 </div>
                             </div>
                         </div>
