@@ -1,6 +1,9 @@
 import os
 import pg8000.dbapi
 from google.cloud.sql.connector import Connector, IPTypes
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def get_db_connection():
     """
