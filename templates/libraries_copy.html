@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+        {% block main %}
+        <section>
+             <div class="container">
+            <h1 class="mt-5">Project Process and Technologies</h1>
+            <p class="lead">This page details the methodology and the key Python libraries used in the Muni Image Recognition project.</p>
+
+            <hr>
+
+            <h2>Project Workflow</h2>
+            <p>The project operates in a sequential flow, from capturing images to presenting data-driven forecasts.</p>
+
+            <div class="accordion" id="workflowAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <strong>Step 1: Image Capture & Object Detection</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#workflowAccordion">
+                        <div class="accordion-body">
+                            The process begins with real-time video capture, orchestrated by our main Python scripts. We use <strong>OpenCV</strong> to interface with camera hardware and process the video stream frame by frame. Each frame is then passed to a pre-trained <strong>YOLOv8 (You Only Look Once)</strong> model, a state-of-the-art object detection algorithm. The model's task is to identify and locate municipal buses within the frame, outputting bounding box coordinates for each detection.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <strong>Step 2: Data Processing and Storage</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#workflowAccordion">
+                        <div class="accordion-body">
+                            Once a bus is detected, the relevant data—such as the timestamp, detection confidence, and bus identifier—is extracted. This raw data is structured and cleaned using the <strong>Pandas</strong> library. It is then persistently stored in an <strong>SQLite</strong> database (<code>muni_detections.db</code>), creating a historical log of all bus activity. This database serves as the single source of truth for the entire application.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <strong>Step 3: Web Application & Visualization</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#workflowAccordion">
+                        <div class="accordion-body">
+                            The collected data is made accessible through a web interface powered by <strong>Flask</strong>, a lightweight web framework. The Flask application (<code>app.py</code>) queries the SQLite database and renders the information into HTML templates. This allows users to view detection data, see trends, and interact with the system through their web browser.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <strong>Step 4: Data Analysis & Forecasting</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#workflowAccordion">
+                        <div class="accordion-body">
+                            With a rich historical dataset, we perform in-depth analysis using scripts like <code>analyse_flask_data.py</code> and Jupyter Notebooks. Libraries such as <strong>Pandas</strong> for data manipulation and <strong>Matplotlib/Seaborn</strong> for visualization are crucial here. The <code>forecast.py</code> script likely uses this data to build and apply time-series forecasting models, predicting future bus patterns.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="mt-5">
+
+            <h2>Core Libraries</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>Ultralytics YOLOv8:</strong> The core of our image recognition, providing fast and accurate object detection.</li>
+                        <li class="list-group-item"><strong>OpenCV (cv2):</strong> Essential for all computer vision tasks, including capturing and processing video feeds.</li>
+                        <li class="list-group-item"><strong>Flask:</strong> A micro web framework used to build the web application that serves the data.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>Pandas:</strong> The primary tool for data manipulation, cleaning, and analysis.</li>
+                        <li class="list-group-item"><strong>SQLite:</strong> The file-based database used for storing all detection and analysis data.</li>
+                        <li class="list-group-item"><strong>Jupyter:</strong> Used for interactive data analysis, exploration, and visualization.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        </section>
+        {% endblock %}
+   

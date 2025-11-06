@@ -1,0 +1,10 @@
+flask
+ultralytics
+opencv-python
+pandas
+psycopg2-binary
+cloud-sql-python-connector
+pg8000
+gunicorn
+python-dotenv
+pg8000

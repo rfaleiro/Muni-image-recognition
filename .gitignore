@@ -1,0 +1,4 @@
+.env
+__pycache__/
+_Cloud_credentials.txt
+zOLD/
