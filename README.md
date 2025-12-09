@@ -3,7 +3,7 @@
 Live Link: https://muni-web-app-796082523807.us-west1.run.app/
 Project Video: https://www.youtube.com/watch?v=qmK1V2FHKFU
 
-The goal of this project is to track real-time data for San Francisco Municipal Railway (Muni) buses using a local webcam and image recognition to forecast arrival intervals.
+The goal of this project is to track real-time data for San Francisco Municipal (Muni) buses using a local webcam and image recognition to forecast arrival intervals.
 
 ### Project Overview
 -  This project goal is to track Muni realtime data using local webcam by levaraging the YOLO Image recognition model. 
