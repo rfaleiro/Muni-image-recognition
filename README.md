@@ -6,7 +6,7 @@ Project Video: https://www.youtube.com/watch?v=qmK1V2FHKFU
 The goal of this project is to track real-time data for San Francisco Municipal (Muni) buses using a local webcam and image recognition to forecast arrival intervals.
 
 ### Project Overview
--  This project goal is to track Muni realtime data using local webcam by levaraging the YOLO Image recognition model. 
+-  Webapp to forecast public transportation arrival time and expose frequency trends based on image recognition model.
 
 ### Data Pipeline & Key Features
 The project employs the following pipeline to achieve its goal:
